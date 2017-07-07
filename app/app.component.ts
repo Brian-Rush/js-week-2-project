@@ -30,8 +30,8 @@ export class AppComponent {
   selectedAnimal = null;
 
   masterAnimalList: Animal[] = [
-    new Animal('Mountain Gorilla', 'Koko', 3, 'Omnivore', 'African Forests', 6, 'Male', 'Learning Sign Language', 'Kittens dying'),
-    new Animal('Dog', 'Muffy', 10, 'Carnivore', 'House Pets of America!', 2, 'Female', 'Belly rubs', 'Fireworks'),
+    new Animal('Mountain Gorilla', 'Koko', 3, 'omnivorous', 'African Forests', 6, 'Male', 'Learning Sign Language', 'Kittens dying'),
+    new Animal('Dog', 'Muffy', 10, 'carnivorous', 'House Pets of America!', 2, 'Female', 'Belly rubs', 'Fireworks'),
   ];
 
   editAnimal(clickedAnimal) {
