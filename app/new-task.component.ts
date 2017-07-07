@@ -1,10 +1,10 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { Task } from './task.model';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'new-task',
   template: `
-    <h1>New Task</h1>
+    <h1>Admit New Animal</h1>
     <div>
       <label>Task Description:</label>
       <input #newDescription>

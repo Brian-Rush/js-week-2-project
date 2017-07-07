@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Task } from './task.model';
+import { Animal } from './animal.model';
 
 @Component({
   selector: 'task-list',
