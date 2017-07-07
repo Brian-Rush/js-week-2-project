@@ -13,10 +13,10 @@ import { Animal } from './animal.model';
         <p>{{month}}/{{day}}/{{year}}</p>
         <h1>Animal Manager</h1>
         <!-- <h3>{{currentFocus}}</h3> -->
+        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
         <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
         <hr>
         <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
-        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
       </div>
       `
     })

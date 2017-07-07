@@ -4,14 +4,31 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-  <select (change)="onChange($event.target.value)">
+  <label>Filter </label>
+  <select (change)="onChange($event.target.value)" id="filter">
     <option value="all" selected="selected">all</option>
     <option value="herbivorous">herbivorous</option>
     <option value="omnivorous">omnivorous</option>
     <option value="carnivorous">carnivorous</option>
   </select>
+  <div class="animal-display">
+    <div class="animal-card" *ngFor="let currentAnimal of childAnimalList | dietSort:filterByDiet">
+      <ul>
+        <li>{{currentAnimal.species}}</li>
+        <li>{{currentAnimal.name}}</li>
+        <li>{{currentAnimal.age}}</li>
+        <li>{{currentAnimal.diet}}</li>
+        <li>{{currentAnimal.location}}</li>
+        <li>{{currentAnimal.caretakers}}</li>
+        <li>{{currentAnimal.sex}}</li>
+        <li>{{currentAnimal.likes}}</li>
+        <li>{{currentAnimal.dislikes}}</li>
+      </ul>
+
+    </div>
+  </div>
   <ul>
-    <li *ngFor="let currentAnimal of childAnimalList | dietSort:filterByDiet">{{currentAnimal.species}} {{currentAnimal.name}} {{currentAnimal.age}} {{currentAnimal.diet}} {{currentAnimal.location}} {{currentAnimal.caretakers}} {{currentAnimal.sex}} {{currentAnimal.likes}} {{currentAnimal.dislikes}}
+    <li >
       <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
     </li>
   </ul>

@@ -4,7 +4,7 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'new-animal',
   template: `
-    <h1>Admit New Animal</h1>
+    <h2>Admit New Animal</h2>
     <div>
       <label>Species:</label>
       <input #newSpecies>
