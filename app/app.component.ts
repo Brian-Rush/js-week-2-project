@@ -10,40 +10,40 @@ import { Animal } from './animal.model';
     </p>
   </div> -->
       <div class="container">
-        <h1>To Do List for {{month}}/{{day}}/{{year}}</h1>
-        <h3>{{currentFocus}}</h3>
-        <task-list [childTaskList]="masterTaskList" (clickSender)="editTask($event)"></task-list>
+        <p>{{month}}/{{day}}/{{year}}</p>
+        <h1>Animal Manager</h1>
+        <!-- <h3>{{currentFocus}}</h3> -->
+        <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
         <hr>
-        <edit-task [childSelectedTask]="selectedTask" (doneButtonClickedSender)="finishedEditing()"></edit-task>
-        <new-task (newTaskSender)="addTask($event)"></new-task>
+        <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
+        <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
       </div>
       `
     })
 
 export class AppComponent {
-  currentFocus: string = 'Angular Homework';
+  // currentFocus: string = 'Angular Homework';
   currentTime = new Date();
   month: number = this.currentTime.getMonth() + 1;
   day: number = this.currentTime.getDate();
   year: number = this.currentTime.getFullYear();
-  selectedTask = null;
+  selectedAnimal = null;
 
-  masterTaskList: Task[] = [
-    new Task('Finish weekend Angular homework for Epicodus course', 3),
-    new Task('Begin brainstorming possible JavaScript group projects', 2),
-    new Task('Add README file to last few Angular repos on GitHub', 2)
+  masterAnimalList: Animal[] = [
+    new Animal('Mountain Gorilla', 'Koko', 3, 'Omnivore', 'African Forests', 6, 'Male', 'Learning Sign Language', 'Kittens dying'),
+    new Animal('Dog', 'Muffy', 10, 'Carnivore', 'House Pets of America!', 2, 'Female', 'Belly rubs', 'Fireworks'),
   ];
 
-  editTask(clickedTask) {
-    this.selectedTask = clickedTask;
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
   }
 
   finishedEditing() {
-    this.selectedTask = null;
+    this.selectedAnimal = null;
   }
 
-  addTask(newTaskFromChild: Task) {
-    this.masterTaskList.push(newTaskFromChild);
+  addAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimalList.push(newAnimalFromChild);
   }
 
 }
