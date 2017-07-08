@@ -6,11 +6,42 @@
 }
 
 body {
-  padding: 20px;
+  background-color: lightgray;
 }
 
-
 div {
-  background-color: red;
   display: flex;
+  flex-direction: column;
+}
+input {
+  margin-bottom: 20px;
+}
+
+button {
+  width: 200px;
+  align-self: flex-end;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+#filter {
+  margin: 10px;
+  padding: 10px;
+}
+
+.animal-display {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+
+}
+.animal-card {
+  min-width: 300px;
+  flex-grow: 1;
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
 }
