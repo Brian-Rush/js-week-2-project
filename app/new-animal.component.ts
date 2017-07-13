@@ -17,13 +17,13 @@ import { Animal } from './animal.model';
     </div>
     <div>
       <label>Diet:</label>
-      <input #newDiet>
-      <!-- <select ng-model="selected_diet">
-        <option [value]="" selected>-</option>
-        <option [value]="herbivorous">herbivorous</option>
-        <option [value]="omnivorous">omnivorous</option>
-        <option [value]="carnivorous">carnivorous</option>
-      </select> -->
+      <!-- <input #newDiet> -->
+      <select #newDiet ng-model="selected_diet">
+        <option value="" selected>-</option>
+        <option value="herbivorous">herbivorous</option>
+        <option value="omnivorous">omnivorous</option>
+        <option value="carnivorous">carnivorous</option>
+      </select>
     </div>
     <div>
       <label>Location:</label>
@@ -33,12 +33,12 @@ import { Animal } from './animal.model';
     </div>
     <div>
       <label>Sex:</label>
-      <input #newSex>
-      <!-- <select #newSex>
-        <option [value]='' selected>-</option>
-        <option [value]='Female'>Female</option>
-        <option [value]='Male'>Male</option>
-      </select> -->
+      <!-- <input #newSex> -->
+      <select #newSex>
+        <option value='' selected>-</option>
+        <option value='Female'>Female</option>
+        <option value='Male'>Male</option>
+      </select>
     </div>
     <div>
       <label>Likes:</label>

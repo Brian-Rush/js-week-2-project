@@ -23,15 +23,14 @@ import { Animal } from './animal.model';
         <li>{{currentAnimal.sex}}</li>
         <li>{{currentAnimal.likes}}</li>
         <li>{{currentAnimal.dislikes}}</li>
+        <li >
+        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
+        </li>
       </ul>
-
     </div>
   </div>
-  <ul>
-    <li >
-      <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit!</button>
-    </li>
-  </ul>
+  <!-- <ul>
+  </ul> -->
   `
 })
 

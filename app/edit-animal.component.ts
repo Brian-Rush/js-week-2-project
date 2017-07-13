@@ -15,22 +15,24 @@ import { Animal } from './animal.model';
           <label>Age:</label>
           <input [(ngModel)]="childSelectedAnimal.age">
           <label>Diet:</label>
-          <select [(ngModel)]="childSelectedAnimal.diet">
+          <input [(ngModel)]="childSelectedAnimal.diet">
+          <!-- <select [(ngModel)]="childSelectedAnimal.diet">
             <option [value]="" selected>-</option>
             <option [value]="herbivorous">herbivorous</option>
             <option [value]="omnivorous">omnivorous</option>
             <option [value]="carnivorous">carnivorous</option>
-          </select>
+          </select> -->
           <label>Location:</label>
           <input [(ngModel)]="childSelectedAnimal.location">
           <label>Caretakers:</label>
           <input [(ngModel)]="childSelectedAnimal.caretakers">
           <label>Sex:</label>
-          <select [(ngModel)]="childSelectedAnimal.sex">
+          <input [(ngModel)]="childSelectedAnimal.sex">
+          <!-- <select [(ngModel)]="childSelectedAnimal.sex">
             <option [value]="0" selected>-</option>
             <option [value]="1">Female</option>
             <option [value]="2">Male</option>
-          </select>
+          </select> -->
           <label>Likes:</label>
           <input [(ngModel)]="childSelectedAnimal.likes">
           <label>Dislikes:</label>
